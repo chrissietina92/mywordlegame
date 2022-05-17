@@ -3,14 +3,18 @@ import sys
 import re
 
 f = open('/Users/chrissie/Desktop/wordlist.10000.txt','r')
-contents = f.read()
-wordOptions = re.findall(r'\b\w{5}\b',contents)
 
+contents = f.read()
+
+wordOptions = re.findall(r'\b\w{5}\b',contents)
+# A regex to find the 5 letter words as the text file includes loads of words of random lenth
 
 easyOptions = ['tears', 'named']
 
-
 littleOptions = ['apple', 'tears', "names", "yours", "words", "heart", "named", "snake", "lists", "pasta", "front", "witch"]
+
+#The above two lists are the lists of words I was practicing using in the wordle game before I found a file of words to use.
+#It was easier to establish whether the code was working the way I wanted it to if I already knew the words it was using.
 
 print('WORDLE!')
 print('- - - - -')
